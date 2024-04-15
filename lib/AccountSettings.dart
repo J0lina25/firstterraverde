@@ -87,7 +87,7 @@ class CreateAccount extends State<AccountSettingForm> {
 
         ),
 
-      Row(
+      Row( 
         mainAxisAlignment: MainAxisAlignment.start,
         children : <Widget>[
           SizedBox(width: 0.0,height:100),
