@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 import 'ProfileInformation.dart';
 
@@ -92,17 +92,12 @@ class OfficialsState extends State<OfficialsForm> {
                                   const ProfileInformationScreen()));
                         },
                         child: Text(names,
-                          style: GoogleFonts.poppins(
-                              color: Colors.black, fontWeight:FontWeight.bold
-                          ),
+                          style: TextStyle(fontSize: 20,color: Colors.white),
                         ),
                       ),
 
                       Text(
                         position,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontWeight:FontWeight.bold
-                        ),
                       ),
 
 

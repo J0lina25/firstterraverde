@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class OopsState extends State<OopsForm> {
   final _formKey = GlobalKey<FormState>();
@@ -99,17 +98,13 @@ class OopsScreen extends StatelessWidget {
 
             Container(
               child:  Center(
-              child:  Text('Oops!',
-                style: GoogleFonts.poppins(color:Color.fromRGBO(25, 73, 91, 1),fontSize: 35,fontWeight: FontWeight.bold),
-              ),
+              child:  Text('Oops!',style:TextStyle(color:Color.fromRGBO(25, 73, 91, 1),fontSize: 35,fontWeight: FontWeight.bold)),
             ),
             ),
 
             Container(
               child:  Center(
-              child:  Text(' Your account was \nunable to be created.\nPlease try again! ',
-                  style: GoogleFonts.poppins(color:Color.fromRGBO(25, 73, 91, 1),fontSize: 15,fontWeight: FontWeight.bold),
-              ),
+              child:  Text(' Your account was \nunable to be created.\nPlease try again! ',style:TextStyle(color:Color.fromRGBO(25, 73, 91, 1),fontSize: 15,fontWeight: FontWeight.bold)),
             ),
             ),
 
@@ -119,9 +114,7 @@ class OopsScreen extends StatelessWidget {
            child: TextButton(
 
               onPressed: () => Navigator.pop(context, 'TRY AGAIN'),
-              child:  Text('TRY AGAIN',
-                   style: GoogleFonts.poppins(color:Color.fromRGBO(201, 66, 69, 1),fontSize: 15,fontWeight: FontWeight.bold),
-              ),
+              child:  Text('TRY AGAIN',style:TextStyle(color:Color.fromRGBO(201, 66, 69, 1),fontSize: 15,fontWeight: FontWeight.bold)),
             ),
             ),
             ),
@@ -129,9 +122,7 @@ class OopsScreen extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
       ),
-      child:  Text('Logout',
-        style: GoogleFonts.poppins(),
-      ),
+      child: const Text('Logout'),
     );
 
   }

@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:flutter/material.dart';
 //email_validator.dart';
 //import 'package:worktime_client/src/config/constants.dart';
@@ -87,9 +87,6 @@ class EditProfile extends State<EditProfileForm> {
                   }
                   //return value.isValidEmail() ? null : 'Invalid email';
                 },
-                style: GoogleFonts.poppins(
-                    color: Colors.black, fontWeight:FontWeight.bold
-                ),
               ),
             ),
         Padding(
@@ -122,9 +119,6 @@ class EditProfile extends State<EditProfileForm> {
                     return 'Password must be at least 6 characters';
                   }
                 },
-              style: GoogleFonts.poppins(
-                  color: Colors.black, fontWeight:FontWeight.bold
-              ),
               ),
               ),
               Padding(
@@ -136,9 +130,7 @@ class EditProfile extends State<EditProfileForm> {
                   hintText: 'Last Name',
                   border: const OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
               Padding(
@@ -150,9 +142,7 @@ class EditProfile extends State<EditProfileForm> {
                   hintText: 'First Name',
                   border: const OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
               Padding(
@@ -164,9 +154,7 @@ class EditProfile extends State<EditProfileForm> {
                   hintText: 'Middle Name',
                   border: const OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
 
@@ -179,9 +167,7 @@ class EditProfile extends State<EditProfileForm> {
                   hintText: 'Contact Number',
                   border: const OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
 

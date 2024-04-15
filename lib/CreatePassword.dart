@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:flutter/material.dart';
 
 class CreatePasswordState extends State<CreatePasswordForm> {
@@ -74,7 +74,6 @@ class CreatePasswordState extends State<CreatePasswordForm> {
                           return 'Password must be at least 6 characters';
                         }
                       },
-                      style: GoogleFonts.poppins(),
                     ),
                   ),
 
@@ -108,7 +107,6 @@ class CreatePasswordState extends State<CreatePasswordForm> {
                           return 'Password must be at least 6 characters';
                         }
                       },
-                      style: GoogleFonts.poppins(),
                     ),
                   ),
 
@@ -141,10 +139,7 @@ class CreatePasswordState extends State<CreatePasswordForm> {
                         }
                       },
                       //child: const Text('Log in'),
-                      child:  Text('Confirm',
-                          style: GoogleFonts.poppins(color: Colors.black, fontWeight:FontWeight.bold ),
-
-                      ),
+                      child: const Text('Confirm', style: TextStyle(color: Colors.black, fontWeight:FontWeight.bold )),
                     ),
 
                   ),

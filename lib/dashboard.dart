@@ -6,7 +6,6 @@ import 'AnnouncementList.dart';
 import 'Events.dart';
 import 'Officials.dart';
 import 'ProfileInformation.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter/material.dart';
 
@@ -27,9 +26,10 @@ class dashboardState extends State<dashboardForm> {
        Container(
          padding: const EdgeInsets.fromLTRB(50,8,50,8),
          margin: const EdgeInsets.only(top: 10.0),
-         child: Text('Hi Carl Oliva \n Welcome to TRIMS',
-
-             style: GoogleFonts.poppins(fontSize: 20),
+         child:const Text('Hi Carl Oliva \n Welcome to TRIMS',
+                style: TextStyle(
+                    fontSize: 20.0,
+                )
             ),
 
       ),
@@ -108,7 +108,7 @@ class dashboardStateList extends State<dashboardList> {
                                   const AnnouncementListScreen()));
                         },
                         child: Text('Announcement',
-                          style: GoogleFonts.poppins(fontSize: 17,color: Colors.white),
+                          style: TextStyle(fontSize: 17,color: Colors.white),
                         ),
                       ),
 
@@ -153,7 +153,7 @@ class dashboardStateList extends State<dashboardList> {
                                   const EventsScreen()));
                         },
                         child: Text('       Events',
-                          style: GoogleFonts.poppins(fontSize: 17,color: Colors.white),
+                          style: TextStyle(fontSize: 17,color: Colors.white),
                         ),
                       )
 
@@ -223,7 +223,7 @@ class dashboardStateList2 extends State<dashboardList2> {
                                   const OfficialsScreen()));
                         },
                         child: Text('     Officials',
-                          style: GoogleFonts.poppins(fontSize: 17,color: Colors.white),
+                          style: TextStyle(fontSize: 17,color: Colors.white),
                         ),
                       )
 
@@ -266,7 +266,7 @@ class dashboardStateList2 extends State<dashboardList2> {
                                   const ProfileInformationScreen()));
                         },
                         child: Text('      Profile',
-                          style: GoogleFonts.poppins(fontSize: 17,color: Colors.white),
+                          style: TextStyle(fontSize: 17,color: Colors.white),
                         ),
                       )
 
@@ -398,7 +398,7 @@ class dashboardScreen extends StatelessWidget {
           image: DecorationImage(image: NetworkImage('lib/assets/images/bg_c.png'),fit: BoxFit.fill),
         ),
         height: MediaQuery.of(context).size.height,
-        child:  SingleChildScrollView(
+        child: const SingleChildScrollView(
         child:  Column(
 
           mainAxisAlignment: MainAxisAlignment.start,
@@ -409,8 +409,9 @@ class dashboardScreen extends StatelessWidget {
             dashboardForm(),
             Text(
               'Home',
-
-              style: GoogleFonts.poppins(fontSize: 20),
+                style: TextStyle(
+                  fontSize: 20.0,
+                )
             ),
             dashboardList(),
             dashboardList2(),

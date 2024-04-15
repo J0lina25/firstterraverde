@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'EditProfile.dart';
 import 'dashboard.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter/material.dart';
 
@@ -70,20 +69,14 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                       Container(
                         margin: const EdgeInsets.fromLTRB(0,150,0,0),
                         padding: const EdgeInsets.fromLTRB(0,0,0,8),
-                        child:  Text(
+                        child: const Text(
                           'Gavino Caro',
-                          style: GoogleFonts.poppins(
-                              color: Colors.white, fontWeight:FontWeight.bold
-                          ),
                         ),
                       ),
                       Container(
                         padding: const EdgeInsets.fromLTRB(0,0,0,8),
-                        child:  Text(
+                        child: const Text(
                           'Head of the Family',
-                          style: GoogleFonts.poppins(
-                              color: Colors.white, fontWeight:FontWeight.bold
-                          ),
                         ),
                       ),
 
@@ -94,9 +87,8 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child: Text(
+                                child:const Text(
                                   'Last name : ',
-
                                 ),
                               ),
                             ),
@@ -104,11 +96,9 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child:  Text(
+                                child: const Text(
                                   'Caro',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white,fontWeight: FontWeight.bold
-                                  ),
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -142,11 +132,9 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child:  Text(
+                                child: const Text(
                                   'Gavino',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white,fontWeight: FontWeight.bold
-                                  ),
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -171,9 +159,8 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child: Text(
+                                child:const Text(
                                   'Middle name : ',
-
                                 ),
                               ),
                             ),
@@ -181,22 +168,18 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child:  Text(
+                                child: const Text(
                                   'Pogi',
-                                 style: GoogleFonts.poppins(
-                                      color: Colors.white,fontWeight: FontWeight.bold
-                                  ),
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(right: 290.0),
-                                child:  Text(
+                                child: const Text(
                                   '          ',
-                                   style: GoogleFonts.poppins(
-                                      color: Colors.white,fontWeight: FontWeight.bold
-                                  ),
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -212,11 +195,8 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child: Text(
+                                child:const Text(
                                   'Birthday : ',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white, fontWeight:FontWeight.bold
-                                  ),
                                 ),
                               ),
                             ),
@@ -224,11 +204,9 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             WidgetSpan(
                               child: Container(
                                 margin: const EdgeInsets.only(top: 2.0),
-                                child:  Text(
+                                child: const Text(
                                   'August 1980',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white,fontWeight: FontWeight.bold
-                                  ),
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -237,7 +215,7 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                                 margin: const EdgeInsets.only(right: 290.0),
                                 child: const Text(
                                   '          ',
-
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -255,7 +233,6 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                                 margin: const EdgeInsets.only(top: 2.0),
                                 child:const Text(
                                   'Gender : ',
-
                                 ),
                               ),
                             ),
@@ -280,9 +257,6 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                             ),
 
                           ],
-                        ),
-                        style: GoogleFonts.poppins(
-                            color: Colors.white, fontWeight:FontWeight.bold
                         ),
                       ),
 
@@ -320,9 +294,6 @@ class ProfileInformationState extends State<ProfileInformationForm> {
 
                           ],
                         ),
-                        style: GoogleFonts.poppins(
-                            color: Colors.white, fontWeight:FontWeight.bold
-                        ),
                       ),
 
                       Text.rich(
@@ -359,9 +330,6 @@ class ProfileInformationState extends State<ProfileInformationForm> {
 
                           ],
                         ),
-                        style: GoogleFonts.poppins(
-                            color: Colors.white, fontWeight:FontWeight.bold
-                        ),
                       ),
 
 
@@ -382,7 +350,6 @@ class ProfileInformationState extends State<ProfileInformationForm> {
                        Icons.edit_calendar_rounded,
                        color: Colors.greenAccent,
                        size: 40,
-
                      ),
                      onPressed: () {
                        Navigator.push(
@@ -429,11 +396,7 @@ class ProfileInformationScreen extends StatelessWidget {
       appBar : AppBar(
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(25, 74, 89, 1),
-        title:  Text('Profile Information',
-          style: GoogleFonts.poppins(
-              color: Colors.white, fontWeight:FontWeight.bold
-          ),
-        ),
+        title: const Text('Profile Information'),
         leading: GestureDetector(
           child: Icon( Icons.arrow_back_ios, color: Colors.white),
           onTap: () {

@@ -1,21 +1,19 @@
-import 'dart:convert';
 import 'dart:io';
 import 'CreateAccount.dart';
 import 'CreatePassword.dart';
-import 'dashboard.dart';
 //import 'package:flutter_rest_api/screen/home.dart';
 import 'screen/home.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
 
   // create email and password controller
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   final emailFocusNode = FocusNode();
   final passwordFocusNode = FocusNode();
@@ -25,105 +23,14 @@ class LoginFormState extends State<LoginForm> {
   var _isObscured;
   bool ? isChecked = true;
 
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
-  Future fetchPost()async {
-    //var ur = "http://192.168.74.1/flutter-login-signup/register.php";
-    //var ur = "http://localhost/flutter-login-signup/json.php";
-    var ur = "https://app.swaggerhub.com/apis/JOLINAPERALTA21/your-api/1.0.0";
-    var response = await http.post(ur as Uri,body: {
-      "username" : emailController.text,
-      "password" : passwordController.text,
-    });
-    Navigator.push(context, MaterialPageRoute(builder : (context) => dashboardScreen()));
-    var data = json.decode(response.body);
-    print('datas');
-    if(data == "Success")
-        {
-      Fluttertoast.showToast(
-          msg: "Login Successful",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          backgroundColor: Colors.green,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
-      Navigator.push(context, MaterialPageRoute(builder : (context) => dashboardScreen()));
-    }
-    else{
-      Fluttertoast.showToast(
-          msg: "Failed",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          backgroundColor: Colors.red,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
+  _launchURL() async {
+    Uri _url = Uri.parse('https://www.educative.io');
+    if (await launchUrl(_url)) {
+      await launchUrl(_url);
+    } else {
+      throw 'Could not launch $_url';
     }
   }
-
-
-  String data = '';
-
-  Future<void> login() async {
-    var username = 'admin@gmail.com';
-    var pass = 'admin12345';
-
-    /*
-    if(username==emailController.text && pass == passwordController.text){
-      Fluttertoast.showToast(
-          msg: "Sucess",
-          toastLength: Toast.LENGTH_LONG,
-          gravity: ToastGravity.CENTER,
-          backgroundColor: Colors.green,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
-      Navigator.push(context, MaterialPageRoute(builder : (context) => dashboardScreen()));
-    }
-    else{
-      Fluttertoast.showToast(
-          msg: "Failed",
-          toastLength: Toast.LENGTH_LONG,
-          gravity: ToastGravity.CENTER,
-          backgroundColor: Colors.lightBlue,
-          textColor: Colors.red,
-          fontSize: 16.0
-      );
-    }
-
-     */
-    //final response = await http.post(Uri.parse('https://trims.azurewebsites.net/api/v1/Authentications/connect'));
-    final response = await http.get(Uri.parse('https://trims.azurewebsites.net/api/v1/Authentications/connect'));
-    Navigator.push(context, MaterialPageRoute(builder : (context) => dashboardScreen()));
-
-     if (response.statusCode == 200) {
-      Fluttertoast.showToast(
-          msg: "Sucess",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          backgroundColor: Colors.green,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
-      setState(() {
-        Navigator.push(context, MaterialPageRoute(builder : (context) => dashboardScreen()));
-        data = json.decode(response.body)['title'];
-      });
-    }
-     else{
-       Fluttertoast.showToast(
-           msg: "Failed",
-           toastLength: Toast.LENGTH_SHORT,
-           gravity: ToastGravity.CENTER,
-           backgroundColor: Colors.red,
-           textColor: Colors.white,
-           fontSize: 16.0
-       );
-     }
-  }
-
 
   @override
   void initState() {
@@ -270,8 +177,7 @@ class LoginFormState extends State<LoginForm> {
                       ),),
 
                        onPressed: () {
-                         //loginPage();
-                         login();
+                         //insertrecord();
                         // Validate returns true if the form is valid, or false otherwise.
                         if (_formKey.currentState!.validate()) {
                           // If the form is valid, display a snackbar. In the real world,
@@ -282,11 +188,7 @@ class LoginFormState extends State<LoginForm> {
                         }
                       },
                       //child: const Text('Log in'),
-                      child:  Text('Log in',
-                          style: GoogleFonts.poppins(
-                              color: Colors.black, fontWeight:FontWeight.bold
-                          ),
-                          ),
+                      child: const Text('Log in', style: TextStyle(color: Colors.black, fontWeight:FontWeight.bold )),
                     ),
 
                   ),
@@ -350,16 +252,6 @@ class LoginFormState extends State<LoginForm> {
                 ])));
   }
 }
-
-class Post {
-  static Future<void> fromJson(decode) async {
-
-
-
-  }
-}
-
-
 
 // Define a custom form widget
 class LoginForm extends StatefulWidget {
