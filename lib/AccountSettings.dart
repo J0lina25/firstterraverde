@@ -5,19 +5,13 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'ProfileInformation.dart';
 import 'Bookmark.dart';
-import 'LoginPage.dart';
-import 'package:google_fonts/google_fonts.dart';
 //email_validator.dart';
 //import 'package:worktime_client/src/config/constants.dart';
 //import 'package:worktime_client/src/services/http-client.dart';
 
 class CreateAccount extends State<AccountSettingForm> {
   final _formKey = GlobalKey<FormState>();
-  signOut() async {
-    //await auth.signOut();
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => LoginScreen()));
-  }
+
   // create email and password controller
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -82,9 +76,7 @@ class CreateAccount extends State<AccountSettingForm> {
                             const ProfileInformationScreen()));
                   },
                   child: Text(' Profile Setting',
-                    style: GoogleFonts.poppins(
-                        fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold
-                    ),
+                   style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
@@ -118,9 +110,7 @@ class CreateAccount extends State<AccountSettingForm> {
                           const BookmarkScreen()));
                 },
                 child: Text(' Bookmarks',
-                  style: GoogleFonts.poppins(
-                      fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold
-                  ),
+                  style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -153,10 +143,8 @@ class CreateAccount extends State<AccountSettingForm> {
                             const ProfileInformationScreen()));
                   },
                   child: Text('Privacy Policy',
-                    style: GoogleFonts.poppins(
-                        fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold
-                    ),
-                    ),
+                    style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),
+                  ),
                 ),
               ],
             ),
@@ -187,12 +175,7 @@ class CreateAccount extends State<AccountSettingForm> {
                   onTap: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
-                      title:  Text('Are you sure you \n want to logout?',
-
-    style: GoogleFonts.poppins(
-        color:const Color.fromRGBO(25, 73, 91, 1),fontSize: 25,fontWeight: FontWeight.bold
-    ),
-                          ),
+                      title: const Text('Are you sure you \n want to logout?',style:TextStyle(color:Color.fromRGBO(25, 73, 91, 1),fontSize: 25,fontWeight: FontWeight.bold)),
                       actions: <Widget>[
 
                         TextButton(
@@ -206,10 +189,8 @@ class CreateAccount extends State<AccountSettingForm> {
                             ),
                           ),
                           onPressed: () => Navigator.pop(context, 'CANCEL'),
-                          child:  Text('CANCEL',
-                               style: GoogleFonts.poppins(
-                                color:const Color.fromRGBO(25, 73, 91, 1),fontSize: 10,fontWeight: FontWeight.bold
-                            ),
+                          child: const Text('CANCEL',
+                              style:TextStyle(color:Color.fromRGBO(25, 73, 91, 1),fontSize: 10,fontWeight: FontWeight.bold)
 
                           ),
                         ),
@@ -225,22 +206,14 @@ class CreateAccount extends State<AccountSettingForm> {
                             )
                             ),
                           ),
-                          onPressed: () => signOut(),
-                          child: Text('LOGOUT',
-    style: GoogleFonts.poppins(
-    color:Colors.white,fontSize: 10,fontWeight: FontWeight.bold
-    ),
-                          ),
+                          onPressed: () => Navigator.pop(context, 'LOGOUT'),
+                          child: const Text('LOGOUT',style:TextStyle(color:Colors.white,fontSize: 10,fontWeight: FontWeight.bold)),
                         ),
                       ],
                       backgroundColor: Colors.white,
                     ),
                   ),
-                  child: Text('Logout',
-    style: GoogleFonts.poppins(
-    color: Color.fromRGBO(190, 89, 110, 1),fontSize: 20,fontWeight: FontWeight.bold
-    ),
-                  ),
+                  child: Text('Logout',style:TextStyle(color: Color.fromRGBO(190, 89, 110, 1),fontSize: 20,fontWeight: FontWeight.bold)),
                 ),
               ]
             ),
@@ -272,11 +245,7 @@ class AccountSettingsScreen extends StatelessWidget {
       appBar : AppBar(
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(25, 74, 89, 1),
-        title:  Text('Account Settings',
-          style: GoogleFonts.poppins(
-              color: Colors.white, fontWeight:FontWeight.bold
-          ),
-        ),
+        title: const Text('Account Settings'),
 
         leading: GestureDetector(
           child: Icon( Icons.arrow_back_ios, color: Colors.white),

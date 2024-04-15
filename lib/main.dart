@@ -37,7 +37,6 @@ class WorkTime extends StatelessWidget {
     return MaterialApp(
       title: 'Title',
       theme: ThemeData(
-        fontFamily: 'Poppins',
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -54,7 +53,7 @@ class WorkTime extends StatelessWidget {
         /* dark theme settings */
       ),
       themeMode: ThemeMode.dark,
-      home: const LoginScreen(),
+      //home: const LoginScreen(),
       //home: const CreateAccountScreen(),
         //home: const PrivacyPolicyScreen(),
         //home: const AddFamilyMemberScreen(),
@@ -74,7 +73,7 @@ class WorkTime extends StatelessWidget {
       //home: const LogoutScreen(),
       //home: const OopsScreen(),
       //home: const CreatePasswordScreen(),
-      //home: const dashboardScreen(),
+      home: const dashboardScreen(),
       //home: const VerificationScreen(),
       //home: const ResetScreen(),
 

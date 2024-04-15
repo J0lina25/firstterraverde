@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 //email_validator.dart';
 //import 'package:worktime_client/src/config/constants.dart';
 //import 'package:worktime_client/src/services/http-client.dart';
@@ -66,9 +65,6 @@ class CreateAccount extends State<CreateAccountForm> {
                   }
                   //return value.isValidEmail() ? null : 'Invalid email';
                 },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
               ),
               ),
               Padding(
@@ -101,9 +97,6 @@ class CreateAccount extends State<CreateAccountForm> {
                     return 'Password must be at least 6 characters';
                   }
                 },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
               ),
               ),
               Padding(
@@ -122,9 +115,6 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
               ),
               ),
               Padding(
@@ -143,10 +133,7 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
-                ),
+              ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10,20,10,8),
@@ -164,10 +151,7 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
-                ),
+              ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10,20,10,8),
@@ -185,10 +169,7 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
-                ),
+              ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10,20,10,8),
@@ -206,10 +187,7 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
-                ),
+              ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10,20,10,8),
@@ -227,10 +205,7 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
-                ),
+              ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10,20,10,8),
@@ -249,10 +224,7 @@ class CreateAccount extends State<CreateAccountForm> {
                     }
                     //return value.isValidEmail() ? null : 'Invalid email';
                   },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
-                ),
+              ),
               ),
 
 

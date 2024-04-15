@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'CreateAccount.dart';
 import 'CreatePassword.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:flutter/material.dart';
 
 class ResetState extends State<ResetForm> {
@@ -21,10 +21,12 @@ class ResetState extends State<ResetForm> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                padding:  EdgeInsets.fromLTRB(0,0,0,8),
-                margin:  EdgeInsets.only(top: 50.0),
-                child: Text('Reset Password \n',
-                     style: GoogleFonts.poppins(fontSize: 20.0),
+                padding: const EdgeInsets.fromLTRB(0,0,0,8),
+                margin: const EdgeInsets.only(top: 50.0),
+                child:const Text('Reset Password \n',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    )
                 ),
 
 
@@ -54,11 +56,7 @@ class NextPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:  Text('Next Page',
-        style: GoogleFonts.poppins(),
-      ),
-
-      ),
+      appBar: AppBar(title: const Text('Next Page'),),
       body: const Center(
         child: Text('GeeksForGeeks'),
       ),
@@ -120,16 +118,16 @@ class ResetStateList extends State<ResetList> {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 40.0,vertical: 50.0),
-                    child:  Column(
+                    child: const Column(
                       children: [
 
                         Text(
                           'via email:',
-                          style: GoogleFonts.poppins(color: Color.fromRGBO(25, 74, 89, 1),fontSize: 17,fontWeight:FontWeight.bold),
+                    style: TextStyle(color: Color.fromRGBO(25, 74, 89, 1),fontSize: 17,fontWeight:FontWeight.bold),
                         ),
                         Text(
                           'sample@gmail.com',
-                          style: GoogleFonts.poppins(color: Color.fromRGBO(25, 74, 89, 1),fontSize: 17,fontWeight:FontWeight.bold),
+                            style: TextStyle(color: Color.fromRGBO(25, 74, 89, 1),fontSize: 17,fontWeight:FontWeight.bold),
                         ),
 
                       ],

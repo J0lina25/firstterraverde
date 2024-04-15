@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'AnnouncementDetails.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter/material.dart';
 
@@ -54,7 +53,7 @@ class AnnouncementListState extends State<AnnouncementListForm> {
 
                   Container(
 
-                    child:  Column(
+                    child: const Column(
                       children: [
 
                          Text.rich(
@@ -78,24 +77,15 @@ class AnnouncementListState extends State<AnnouncementListForm> {
                               ),
 
                             ],
-                            style: GoogleFonts.poppins(
-                                color: Colors.white, fontWeight:FontWeight.bold
-                            ),
                           ),
                         ),
                         Text(
                           '\nGeneral Assembly - HOA and Residence',
                           softWrap: true,
-                          style: GoogleFonts.poppins(
-                              color: Colors.white, fontWeight:FontWeight.bold
-                          ),
                         ),
                         Text(
                           'ClubHouse Terraverde Residence',
                           softWrap: true,
-                          style: GoogleFonts.poppins(
-                              color: Colors.white, fontWeight:FontWeight.bold
-                          ),
                         ),
 
                       ],
@@ -165,6 +155,18 @@ class AnnouncementListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar : AppBar(
+        centerTitle: true,
+        backgroundColor: const Color.fromRGBO(25, 74, 89, 1),
+        title: const Text('Announcement'),
+
+        leading: GestureDetector(
+          child: Icon( Icons.arrow_back_ios, color: Colors.white),
+          onTap: () {
+            Navigator.pop(context);
+          } ,
+        ) ,
+      ),
       backgroundColor: Colors.teal,
       body: Container(
         decoration: const BoxDecoration(
@@ -175,20 +177,6 @@ class AnnouncementListScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
 
-        Padding(
-          padding:  EdgeInsets.only(
-            left: 40,
-            top: 20,
-            right: 40,
-            bottom: 60,
-          ),
-           child:  Text(
-              'Announcement',
-              style: TextStyle(fontSize: 20,color: Colors.white),
-
-
-              ),
-            ),
 
              AnnouncementListForm(),
              AnnouncementListForm(),

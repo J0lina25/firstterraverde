@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class PrivacyPolicyState extends State<PrivacyPolicy> {
   final _formKey = GlobalKey<FormState>();
@@ -64,16 +63,14 @@ class PrivacyPolicyState extends State<PrivacyPolicy> {
                     padding: const EdgeInsets.fromLTRB(50,8,50,0),
                     margin: const EdgeInsets.only(top: 10.0),
                     height: MediaQuery.of(context).size.height,
-                    width: 500,
+                    width: 400,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         RichText(
 
                           text:  TextSpan(
-                             style: GoogleFonts.poppins(
-                                fontSize: 20,color: Colors.white
-                            ),
+                            style: TextStyle(fontSize: 20,color: Colors.white),
 
                             children:  <TextSpan>[
                               TextSpan(text: 'Last Updated: May 11, 2024 '),
@@ -95,7 +92,6 @@ class PrivacyPolicyState extends State<PrivacyPolicy> {
 
                       ],
                     ),
-
                   ),
 
 

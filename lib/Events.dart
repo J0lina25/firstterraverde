@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'EventDetails.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:flutter/material.dart';
 
 class EventsState extends State<EventsForm> {
@@ -100,17 +100,11 @@ class EventsState extends State<EventsForm> {
 
                           ],
                         ),
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontWeight:FontWeight.bold
-                        ),
                       ),
 
                        Text(
                         description,
                         softWrap: true,
-                         style: GoogleFonts.poppins(
-                             color: Colors.black, fontWeight:FontWeight.bold
-                         ),
                       ),
 
                     ],
@@ -148,11 +142,7 @@ class EventsState extends State<EventsForm> {
 
                     },
                     //child: const Text('Log in'),
-                    child:  Text('View',
-                         style: GoogleFonts.poppins(
-                          color: Colors.white, fontWeight:FontWeight.bold
-                      ),
-                    ),
+                    child: const Text('View', style: TextStyle(color: Colors.white, fontWeight:FontWeight.bold )),
                   ),
 
                 ),
@@ -190,11 +180,7 @@ class EventsScreen extends StatelessWidget {
       appBar : AppBar(
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(25, 74, 89, 1),
-        title:  Text('Events',
-          style: GoogleFonts.poppins(
-              color: Colors.black, fontWeight:FontWeight.bold
-          ),
-        ),
+        title: const Text('Events'),
 
         leading: GestureDetector(
           child: Icon( Icons.arrow_back_ios, color: Colors.white),

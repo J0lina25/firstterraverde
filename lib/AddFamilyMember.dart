@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 //email_validator.dart';
 //import 'package:worktime_client/src/config/constants.dart';
 //import 'package:worktime_client/src/services/http-client.dart';
@@ -69,9 +68,6 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   }
                   //return value.isValidEmail() ? null : 'Invalid email';
                 },
-                style: GoogleFonts.poppins(
-                    color: Colors.black, fontWeight:FontWeight.bold
-                ),
               ),
               ),
               Padding(
@@ -104,9 +100,6 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                     return 'Password must be at least 6 characters';
                   }
                 },
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
               ),
               ),
               Padding(
@@ -118,9 +111,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'Last Name',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
               Padding(
@@ -132,9 +123,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'First Name',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
               Padding(
@@ -146,9 +135,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'Middle Name',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
 
@@ -161,9 +148,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'Contact Number',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
               Padding(
@@ -175,9 +160,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'Birth Date',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
               Padding(
@@ -189,9 +172,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'Gender',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
 
@@ -204,9 +185,7 @@ class AddFamilyMember extends State<AddFamilyMemberForm> {
                   hintText: 'Family Relationship',
                   border:  OutlineInputBorder(),
                 ),
-                  style: GoogleFonts.poppins(
-                      color: Colors.black, fontWeight:FontWeight.bold
-                  ),
+
               ),
               ),
 
@@ -268,12 +247,7 @@ class AddFamilyMemberScreen extends StatelessWidget {
       appBar : AppBar(
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(25, 74, 89, 1),
-        title:  Text(
-          'Add Family Member',
-          style: GoogleFonts.poppins(
-              color: Colors.black, fontWeight:FontWeight.bold
-          ),
-        ),
+        title: const Text('Add Family Member'),
 
         leading: GestureDetector(
           child: Icon( Icons.arrow_back_ios, color: Colors.white),

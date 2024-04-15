@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 //email_validator.dart';
 //import 'package:worktime_client/src/config/constants.dart';
 //import 'package:worktime_client/src/services/http-client.dart';
@@ -70,9 +69,7 @@ class AnnouncementDetailsState extends State<AnnouncementDetailsForm> {
                         RichText(
 
                           text:  TextSpan(
-                            style: GoogleFonts.poppins(
-                                fontSize: 20,color: Colors.white
-                            ),
+                            style: TextStyle(fontSize: 20,color: Colors.white),
                             children:  <TextSpan>[
                               TextSpan(text: 'General Assembly \n'),
                               TextSpan(text: 'September 27, 2024        10:00 am'),
